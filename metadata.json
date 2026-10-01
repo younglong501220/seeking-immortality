@@ -1,0 +1,6 @@
+{
+  "name": "覓長生：凡人逆仙傳",
+  "description": "經典凡人流修仙RPG，包含五行靈氣卡牌構築(DBG)戰鬥、壽元天劫突破、君臣佐使造化煉丹、宗門秘術與天機閣拍賣歷練。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

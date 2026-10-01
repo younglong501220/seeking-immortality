@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@keyframes particleSparkle {
+  0% {
+    transform: translateY(0) scale(0.6);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-8px) scale(1.2);
+    opacity: 1;
+    filter: drop-shadow(0 0 6px currentColor);
+  }
+  100% {
+    transform: translateY(-16px) scale(0.4);
+    opacity: 0;
+  }
+}
+
+@keyframes tierGlowShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-particle-sparkle {
+  animation: particleSparkle 1.8s ease-in-out infinite;
+}
+
+.animate-tier-glow {
+  background-size: 200% 200%;
+  animation: tierGlowShift 2.5s ease infinite;
+}
+
