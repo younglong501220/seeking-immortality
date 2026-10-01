@@ -7,13 +7,11 @@ on:
       - master
   workflow_dispatch:
 
-# 設定 GitHub Pages 所需權限
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# 確保同一時間只有一個部署流程在執行
 concurrency:
   group: 'pages'
   cancel-in-progress: true
@@ -32,10 +30,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          # 注意：此處刻意移除 cache: 'npm' 設定，避免因倉庫未包含或不同步 package-lock.json 時強制要求 lockfile 而報錯中斷
 
       - name: Install dependencies
-        # 使用 --legacy-peer-deps 徹底避免套件版本衝突失敗，無論倉庫內是否有 package-lock.json 都能順暢完成依賴安裝
         run: npm install --legacy-peer-deps
 
       - name: Build project with Vite
